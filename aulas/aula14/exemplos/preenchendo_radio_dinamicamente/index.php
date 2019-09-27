@@ -11,7 +11,7 @@
       $teste ['Carlos'] = 32;
       $teste ['Maria'] = 15;
     ?>
-    <form action="radio.php" method="post">
+    <form action="radio.php" method="POST">
       <b>Escolha uma das pessoas abaixo: </b><br>
       <?php
         foreach ($teste as $nomes => $idades) {
