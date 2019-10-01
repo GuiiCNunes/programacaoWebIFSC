@@ -1,4 +1,4 @@
-#Atividade 2
+# Atividade 2
 
 Crie um script php que armazene os dados da tabela abaixo em um array.
 
