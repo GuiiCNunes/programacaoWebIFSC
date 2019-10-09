@@ -13,4 +13,5 @@
 | 12 | 04/09/2019 | Trabalhando com formulários (campos password, hidden, radio) | Exemplos, Jogo, Lista Exerc., e Projeto 1 |
 | 13 | 11/09/2019 | Estruturas de repetição em php. | Exemplo Radio, Exercícios e Lista de Exerc. |
 | 14 | 18/09/2019 | Arrays e Campos check box. | Atividades(1,2,3,4), Projetos (3,4) e Exemplos |
-| 14 | 02/10/2019 | Matrizes | ... |
+| 15 | 02/10/2019 | Matrizes Numéricas e Associativas | Exemplo |
+| 16 | 04/10/2019 | Constantes e Funções | Exemplos e Exercícios(2 pastas) |
