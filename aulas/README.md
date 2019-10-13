@@ -15,3 +15,4 @@
 | 14 | 18/09/2019 | Arrays e Campos check box. | Atividades(1,2,3,4), Projetos (3,4) e Exemplos |
 | 15 | 02/10/2019 | Matrizes Numéricas e Associativas | Exemplo |
 | 16 | 04/10/2019 | Constantes e Funções | Exemplos e Exercícios(2 pastas) |
+| 17 | 09/10/2019 | Includes | Exemplos, Exercícios e REVISÃO PROVA|
