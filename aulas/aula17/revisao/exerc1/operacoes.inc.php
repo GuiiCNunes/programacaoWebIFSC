@@ -5,17 +5,13 @@
     if ($op == "crescente") {
       sort($numeros);
       echo "Os números em ordem crescente ficam: <br>";
-      foreach($numeros as $valor){
-        echo "$valor, ";
-      }
+      echo implode(", ",$numeros);
       echo "<br><br>";
     }
     else {
       rsort($numeros);
       echo "Os números em ordem decrescente ficam: <br>";
-      foreach($numeros as $valor){
-        echo "$valor, ";
-      }
+      echo implode(", ",$numeros);
       echo "<br><br>";
     }
   }

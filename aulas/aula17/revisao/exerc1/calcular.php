@@ -1,6 +1,19 @@
 <?php
   include("operacoes.inc.php");
 
+  function soma($n1,$n2) {
+    return $n1 + $n2;
+  }
+  function sub($n1,$n2) {
+    return $n1 - $n2;
+  }
+  function div($n1,$n2) {
+    return $n1 / $n2;
+  }
+  function mult($n1,$n2) {
+    return $n1 * $n2;
+  }
+
   $n1 = $_POST['n1'];
   $n2 = $_POST['n2'];
   $n3 = $_POST['n3'];
@@ -35,28 +48,28 @@
         if ($valor == "Soma") {
           $resultado = 0.0;
           foreach ($_POST['numeros'] as $valor) {
-            $resultado = $resultado + $valor;
+            $resultado = soma($resultado,$valor);
           }
           echo "O resultado da soma é: $resultado <br><br>";
         }
         if ($valor == "Subtração") {
-          $resultado = 0.0;
-          foreach ($_POST['numeros'] as $valor) {
-            $resultado = $resultado - $valor;
+          $resultado = $numeros[0];
+          for ($i = 1; $i < count($numeros); $i++) { //count para saber quantos números tem
+            $resultado = sub($resultado,$numeros[$i]);
           }
           echo "O resultado da subtração é: $resultado <br><br>";
         }
         if ($valor == "Divisão") { //Diferente porque se o resultado partir de zero, compromete a equação.
           $resultado = $numeros[0];
           for ($i = 1; $i < count($numeros); $i++) { //count para saber quantos números tem
-            $resultado = $resultado / $numeros[$i];
+            $resultado = div($resultado,$numeros[$i]);
           }
           echo "O resultado da divisão é: $resultado <br><br>";
         }
         if ($valor == "Multiplicação") { //Diferente porque se o resultado partir de zero, compromete a equação.
           $resultado = $numeros[0];
           for ($i = 1; $i < count($numeros); $i++) {
-            $resultado = $resultado * $numeros[$i];
+            $resultado = mult($resultado,$numeros[$i]);
           }
           echo "O resultado da multiplicação é: $resultado <br><br>";
         }
