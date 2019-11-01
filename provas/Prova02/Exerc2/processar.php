@@ -1,11 +1,11 @@
-<?php 
-	
+<?php
+
 	$departamentos[$_POST['depart1']] = $_POST['sal1'];
 	$departamentos[$_POST['depart2']] = $_POST['sal2'];
 	$departamentos[$_POST['depart3']] = $_POST['sal3'];
 	$maiorsalario = 0;
 
-	echo "<h3>Dados dos funcionários</h3><br><br>";	
+	echo "<h3>Dados dos funcionários</h3><br><br>";
 	foreach ($departamentos as $depart => $sal) {
 		if ($sal > $maiorsalario) {
 			$maiorsalario = $sal;
@@ -30,7 +30,7 @@
     <?php } ?>
 </table>
 
-<?php 
+<?php
 	foreach ($departamentos as $depart => $sal){
 		if ($sal == $maiorsalario) {
 			echo "<br><br>O departamento que tem o maior salário é: $depart e o valor do salário recebido pelo funcionário é de: R$".number_format($sal,2,",",".")."<br><br>";
@@ -38,7 +38,7 @@
 	}
 ?>
 
-<?php 
+<?php
 //+++++++++++++++++++++++++++++++++++++++++++++PLUS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	echo "<h4>Quadro geral: <br></h4>";
 
@@ -58,17 +58,17 @@
     <td bgcolor="#FFFF00"><center><b>Salário</b></center></td>
   </tr>
   <!-- Conteúdo -->
-    <?php foreach ($Departamentos as $depart => $grupo) { ?> 
+    <?php foreach ($Departamentos as $depart => $grupo) { ?>
     	<!-- Foreach Inicial da Matriz, coloca primeiro campo -->
     	<tr> <!-- Inicia a linha -->
     	<td bgcolor="#A4A4A4"> <center><?php echo $depart; ?></center></td> <!-- Nome do departamento 1º Array da Matriz -->
     	<?php foreach ($grupo as $tipo => $valor) {
-    		if ($tipo == "salario") { ?>    
+    		if ($tipo == "salario") { ?>
       			<td bgcolor="#A4A4A4"> <center><?php echo number_format($valor,2,",","."); ?></center></td>
     		<?php } //Encerra o IF
     	else { ?>
     			<td bgcolor="#A4A4A4"> <center><?php echo $valor; ?></center></td>
-    		<?php } //Encera o ELse
+    		<?php } //Encerra o ELse
     	} //Encerra o FOREACH da Linha ?>
     	</tr> <!-- Encerra a linha -->
     <?php } //Encerra o Foreach Geral ?>
