@@ -1,18 +1,14 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Login Administrador</title>
-    <!-- Colocar fonte, estilo e revisar titulos de páginas -->
-  </head>
-  <body>
-    <header>
-
-    </header>
-    <main>
+<?php session_start();
+include("layoutpag.php"); ?>
+    <main class="conteudo">
+      <div class="imagem">
+        <img src="https://redesemfio.ifsc.edu.br/files/2013/08/g14.png" alt="" height="180px">
+      </div>
       <div class="">
-        <form class="" action="validar.php?tipo=admin" method="post">
+        <h1>Área do Administrador:</h1><br>
+      </div>
+      <div class="login">
+        <form action="validar.php?tipo=admin" method="post">
           Login: <input type="text" name="login" required><br>
           Senha: <input type="password" name="senha" required><br>
           <input type="submit" name="btn_entrar" value="Entrar">
@@ -26,6 +22,3 @@
           echo $_SESSION['sair'];
           unset($_SESSION['sair']); } ?>
     </main>
-    <footer></footer>
-  </body>
-</html>

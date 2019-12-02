@@ -3,7 +3,7 @@
 1. Criar a base de dados ifsc e a tabela aluno com as informações e configurações
 abaixo:
 
-
+<!-- Arrumar o readme e fazer com que usuário e administrador voltem para sua área, e não para o index, quando tentar entrar um na do outro. -->
 
 
 2. Deverá ser criado um Sistema para realizar as operações de insert, delete, update e

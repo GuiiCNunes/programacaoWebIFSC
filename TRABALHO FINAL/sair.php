@@ -7,7 +7,7 @@
       header("location: login.php");
     } elseif ($_SESSION['user'] == 'eleitor') {
       unset($_SESSION['user']);
-      unset($_SESSION['codeleitor']);
+      unset($_SESSION['cod']);
       unset($_SESSION['nome']);
       unset($_SESSION['cpf']);
       if ($_SESSION['status'] == 'nao') {

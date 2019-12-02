@@ -5,11 +5,11 @@
     $conexao = conectar('localhost', 'root', '', 'eleicao');
     $inserirNome = $_POST['nome'];
     $inserirCPF = $_POST['cpf'];
-    $sql = "INSERT INTO eleitor (nome,cpf,status,candidato) values ('$inserirNome', '$inserirCPF', 'nao', '0')";
+    $sql = "INSERT INTO eleitor (nome,cpf,status,logovotado) values ('$inserirNome', '$inserirCPF', 'nao', '0')";
     if (mysqli_query($conexao, $sql) == TRUE) {
       desconectar($conexao);
       $_SESSION['resultado'] = "Novo eleitor cadastrado com sucesso!";
-      header("location: inserir.php");
+      header("location: administrador.php");
     } else {
       desconectar($conexao);
       $_SESSION['resultado'] = "NÃO FOI POSSÍVEL CADASTRAR USUÁRIO!";

@@ -4,12 +4,12 @@
     include('conexao.inc.php');
     $conexao = conectar('localhost', 'root', '', 'eleicao');
     $cpf = $_POST['cpf'];
-    $sql = "SELECT codeleitor, nome, cpf, status FROM eleitor where cpf = '$cpf'";
+    $sql = "SELECT cod, nome, cpf, status FROM eleitor where cpf = '$cpf'";
     $executar = mysqli_query($conexao, $sql);
     if ($executar == true) {
       $_SESSION['user'] = "eleitor";
       while ($resultado = mysqli_fetch_array($executar)) {
-        $_SESSION['codeleitor'] = $resultado['codeleitor'];
+        $_SESSION['cod'] = $resultado['cod'];
         $_SESSION['nome'] = $resultado['nome'];
         $_SESSION['cpf'] = $resultado['cpf'];
         $_SESSION['status'] = $resultado['status'];

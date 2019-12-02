@@ -1,8 +1,8 @@
-<?php 
+<?php
 	include ("conexao.inc.php");
 
 	$conexao = conectar("localhost", "root", "", "eleicao");
-	
+
 	$fp = fopen("dados.txt", "r");
 	$i = 0;
 
@@ -11,7 +11,7 @@
 		$nome = substr($linha, 0, 41);
 		$cpf = substr($linha, 61,11);
 
-		$sql = "INSERT INTO eleitor (nome,cpf,status,candidato) values ('$nome','$cpf','nao', '0')";
+		$sql = "INSERT INTO eleitor (nome,cpf,status,logovotado) values ('$nome','$cpf','nao', '0')";
 
 		$query = mysqli_query($conexao, $sql);
 		$i++;

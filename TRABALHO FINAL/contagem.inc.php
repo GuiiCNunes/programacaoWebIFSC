@@ -5,11 +5,11 @@
       include('conexao.inc.php');
       unset($_SESSION['operacao']);
       $conexao = conectar("localhost", "root", "", "eleicao");
-      $sql = "SELECT candidato, COUNT(codeleitor) AS contagem FROM eleitor where status = 'sim' group by candidato";
+      $sql = "SELECT logovotado, COUNT(cod) AS contagem FROM eleitor where status = 'sim' group by logovotado";
       $contagemComVoto = mysqli_query($conexao, $sql);
 
       while ($resultado = mysqli_fetch_array($contagemComVoto)) {
-        $candidato[$resultado['candidato']] = $resultado['contagem'];
+        $candidato[$resultado['logovotado']] = $resultado['contagem'];
       }
       $maisVotos = 0;
       $maisVotado = 0;

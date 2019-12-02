@@ -6,7 +6,7 @@
     $id = $_POST['id'];
     $editarNome = $_POST['nome'];
     $editarCPF = $_POST['cpf'];
-    $sql = "UPDATE eleitor set nome = '$editarNome', cpf = '$editarCPF' where codeleitor = '$id'";
+    $sql = "UPDATE eleitor set nome = '$editarNome', cpf = '$editarCPF' where cod = '$id'";
     $query = mysqli_query($conexao, $sql);
     
     if (mysqli_query($conexao, $sql) == TRUE) {

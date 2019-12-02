@@ -1,21 +1,11 @@
 <?php
   if(!isset($_SESSION)){ session_start(); }
-  if ($_SESSION['user'] == 'administrador') {
-    $user = $_SESSION['user'];
-    ?>
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="utf-8">
-        <title>Central de Configurações</title>
-        <!-- Colocar fonte, estilo e revisar titulos de páginas -->
-      </head>
-      <body>
-        <header>
-
-        </header>
-        <main>
-          <div class="">
+    if ($_SESSION['user'] == 'administrador') {
+      include("layoutpag.php");
+      $user = $_SESSION['user'];
+      ?>
+        <main class="conteudo">
+          <div class="administrador">
             <h1>Bem vind@, <?= $user;?>!</h1><br>
             <h2>O quê deseja fazer?</h2>
             <input type="button" name="btn_inserir" value="Inserir Novos Eleitores" onclick="location.href='inserir.php'"><br>
@@ -35,10 +25,7 @@
               unset($_SESSION['resultado']); } ?>
           </div>
         </main>
-        <footer> </footer>
-      </body>
-    </html>
-  <?php } else {
+    <?php } else {
     $_SESSION['ErroRestrito'] = "Essa é uma área restrita, você precisa estar logado como administrador.";
     header("location: login.php");
   }
