@@ -6,7 +6,7 @@
     $cpf = $_POST['cpf'];
     $sql = "SELECT cod, nome, cpf, status FROM eleitor where cpf = '$cpf'";
     $executar = mysqli_query($conexao, $sql);
-    if ($executar == true) {
+    if (mysqli_num_rows($executar) == 1) {
       $_SESSION['user'] = "eleitor";
       while ($resultado = mysqli_fetch_array($executar)) {
         $_SESSION['cod'] = $resultado['cod'];
