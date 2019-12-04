@@ -14,7 +14,7 @@
           </ul>
         </div> <!-- Maurício Gabriba, Marco Vezzani, André Possa e Consuelo Santos -->
         <?php if($_SESSION['status'] == 'nao') {?>
-        <div class="">
+        <div class="candidados">
           <form class="" action="computaVoto.php" method="post">
             <input type="radio" name="candidato" value="1" required> Maurício Gabriba <br>
             <input type="radio" name="candidato" value="2"> Marco Vezzani <br>
@@ -29,6 +29,8 @@
           <input type="button" name="btn_sair" value="Sair" onclick="location.href='sair.php'">
         </div>
       <?php } ?>
+      <div class="">
+      </div>
       </main>
   <?php } else {
     $_SESSION['ErroRestrito'] = "Você precisa ser um eleitor cadastrado.";

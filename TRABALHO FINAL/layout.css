@@ -90,6 +90,7 @@ tr:nth-child(even) {
 	padding:10px 21px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5b8a3c;
+  margin-top: 60px;
 }
 .confirma:hover {
 	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
@@ -149,4 +150,8 @@ tr:nth-child(even) {
 .editar:active {
 	position:relative;
 	top:1px;
+}
+
+.candidados {
+  font-size: 25px;
 }
